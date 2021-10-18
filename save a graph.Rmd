@@ -1,0 +1,22 @@
+---
+title: "Save a graph"
+author: "Yutian Fang"
+date: "10/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(palmerpenguins)
+```
+
+```{r}
+ggplot(data = penguins, aes(x=island)) +
+  geom_bar(aes(fill = species))
+```
+```{r}
+ggsave()
+```
+
